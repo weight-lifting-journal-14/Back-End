@@ -5,6 +5,12 @@ const Users = require('../users/users-model');
 
 router.post('/register', (req, res) => {
 	let user = req.body;
+	if (!user.username) {
+		res.status(412).json({message: 'missing username buddy'})
+	}
+	if (!user.password) {
+        res.status(422).json({message: "Missing password bud"})
+    }
 	const hash = bcrypt.hashSync(user.password, 10);
 	user.password = hash;
 	Users.add(user)
