@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
     })
 })
 
+
 router.get('/:id', (req, res) => {
     Exercises.findById(req.params.id)
     .then(exercise => {
