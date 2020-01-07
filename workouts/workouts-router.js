@@ -28,31 +28,44 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/:id/exercises', (req, res) => {
-    const workoutData = req.body;
-    const {id} = req.params;
+router.post('/', (req, res) => {
+    const workouts = req.body
+    console.log(workouts)
+    Workouts.add(workouts)
 
-    const exerciseValidation = validExercise(workoutData);
-    console.log(exerciseValidation)
-    if(exerciseValidation.isSuccessful) {
-        Workouts.addExercise(workoutData, id)
-            .then(workout => {
-                console.log(workout)
-                res.status(201).json(workout);
+        .then(workout => {
+            res.status(200).json(workout)
+        })
+        .catch(err => {
+            res.status(500).json({ error: 'failed to add workout'})
+        })
+})
+
+// router.post('/:id/exercises', (req, res) => {
+//     const workoutData = req.body;
+//     const {id} = req.params;
+
+//     const exerciseValidation = validExercise(workoutData);
+//     console.log(exerciseValidation)
+//     if(exerciseValidation.isSuccessful) {
+//         Workouts.addExercise(workoutData, id)
+//             .then(workout => {
+//                 console.log(workout)
+//                 res.status(201).json(workout);
                 
-            })
-            .catch(err => {
-                res.status(500).json({ error: 'server failed to add the exercise to the workout'})
-            });
-    } else {
+//             })
+//             .catch(err => {
+//                 res.status(500).json({ error: 'server failed to add the exercise to the workout'})
+//             });
+//     } else {
         
        
-        res.status(400).json({
-            message: 'The exercise information isnt valid check the errors list for more details',
-            errors: exerciseValidation.errors
-        })
-    }
+//         res.status(400).json({
+//             message: 'The exercise information isnt valid check the errors list for more details',
+//             errors: exerciseValidation.errors
+//         })
+//     }
 
 
-})
+// })
 module.exports = router;
