@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Workouts = require('./workouts-model');
 const restricted = require('../auth/restricted-mid.js');
-const validExercise = require('../middleware/validExercise')
+const {validExercise} = require('../middleware/validExercise')
 
 router.get('/',restricted, (req, res) => {
     Workouts.find()

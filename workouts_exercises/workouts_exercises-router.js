@@ -8,7 +8,7 @@ router.get('/',restricted, (req, res) => {
             res.status(200).json(Workouts_exercises)
         })
         .catch(err => {
-            res.status(500).json({ error: 'the server failed to retrieve all workouts_exercises'})
+            res.status(500).json({ error: 'we the server for the client failed to retrieve workouts exercises'})
         })
 })
 
