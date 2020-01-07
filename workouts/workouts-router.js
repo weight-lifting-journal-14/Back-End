@@ -33,7 +33,7 @@ router.post('/:id/exercises', (req, res) => {
     const {id} = req.params;
 
     const exerciseValidation = validExercise(workoutData);
-    console.log(workoutData)
+    console.log(exerciseValidation)
     if(exerciseValidation.isSuccessful) {
         Workouts.addExercise(workoutData, id)
             .then(workout => {
