@@ -17,11 +17,11 @@ Endpoints that **_DO_** require authentication (Protected):
 |----------------- | --------------------|---------------------|
 |<a href="#users">GET Users</a>                    | /api/users |<b>GET</b> request to get all users
 |<a href="#userID">GET User By ID</a>              | /api/users/:id | <b>GET</b> by user id gets user by id
-|<a href="#allWorkouts">GET All workouts</a>       | /api/workouts | <b>GET</b> request get all workouts
+|<a href="#all Workouts">GET All workouts</a>       | /api/workouts | <b>GET</b> request get all workouts
 |<a href="#workoutID">GET Workout by ID</a>        | /api/workouts/:id | <b>GET</b> request to get all workouts by thier ID
 |<a href="#exercises">GET exercises</a>            | /api/exercises | <b>GET</b> request to get all exercises
 |<a href="#exercisesID">GET exercises by ID</a>    | /api/exercises/:id| <b>GET</b> request to get exercises by thier ID
-|<a href="#userID">GET workouts_exercises</a>              | /api/w-e | <b>GET</b> request to get all workouts_exercises  
+|<a href="#get workouts_exercises">GET workouts_exercises</a>              | /api/w-e | <b>GET</b> request to get all workouts_exercises  
 
 <b>POST</b> request endpoints:
 
@@ -36,12 +36,13 @@ Endpoints that **_DO_** require authentication (Protected):
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
 |<a href="#edit a workout">PUT workout by ID</a>                    | /api/workouts/:id |<b>PUT</b> request to edit a workout
+|<a href="#edit a exercise">PUT exercise by ID</a>                    | /api/exercise/:id |<b>PUT</b> request to edit a workout
 
 <b>DEL</b> request endpoints:
 
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
-|<a href="#users">DEL user by ID</a>                    | /api/users/:id |<b>POST</b> request to delete user by ID
+|<a href="#delete user">DEL user by ID</a>                    | /api/users/:id |<b>POST</b> request to delete user by ID
 
 
 
@@ -217,7 +218,7 @@ _An object of the user information._
 
 <hr />
 
-<div id="Allworkouts"></div>
+<div id="All workouts"></div>
 
 
 ## [GET] All workouts
@@ -274,7 +275,7 @@ _An object of the workouts information._
 
 <hr />
 
-## [GET] All workouts by id
+## [GET] Workout by ID
 
 <a href="#top">Return to the top</a>
 
@@ -371,6 +372,7 @@ _An object of the exercises by id._
 ```
 
 <hr />
+<div id="get workouts_exercises"></div>
 
 ## [GET] All workoutExercises
 
@@ -507,6 +509,8 @@ exercise id will be returned
 
 <hr />
 
+<div id="workouts_exercise"></div>
+
 ## [POST] workouts_exercise
 
 <a href="#top">Return to the top</a>
@@ -586,7 +590,45 @@ message saying the workout of the targeted id was changed, the workout_id and th
 
 <hr />
 
-<div id="user"></div>
+<div id="edit a exercise"></div>
+
+## [PUT] exercise by ID
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/exercise/:id
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|name (required)            | string    |
+|region (required)          | string   |
+
+_An example of how the body should appear:
+
+```js
+  {
+    "name": "changing squats",
+    "region": "changing quads"
+  }
+```
+
+### What will be returned:
+
+message saying the workout of the targeted id was changed, the workout_id and the changes made and by which user
+
+```js
+{
+  "message": "exercise of id: 1 was changed",
+  "exercise": 1,
+  "changes": {
+    "name": "changing squats",
+    "region": "changing quads"
+  }
+}
+```
+
+<div id="delete user"></div>
 
 ## [DEL] User by ID
 
