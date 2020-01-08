@@ -27,9 +27,9 @@ Endpoints that **_DO_** require authentication (Protected):
 
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
-|<a href="#users">POST workout</a>                    | /api/workouts |<b>POST</b> request to add new workout
-|<a href="#userID">POST exercise</a>              | /api/exercises | <b>POST</b> request to add new exercise
-|<a href="#allWorkouts">POST workouts_exercises</a>       | /api/w-e | <b>POST</b> request to add new Workouts_exercises
+|<a href="#workouts">POST workout</a>                    | /api/workouts |<b>POST</b> request to add new workout
+|<a href="#exerciese">POST exercise</a>              | /api/exercises | <b>POST</b> request to add new exercise
+|<a href="#workouts_exercise">POST workouts_exercises</a>       | /api/w-e | <b>POST</b> request to add new Workouts_exercises
 
 <b>DEL</b> request endpoints:
 
@@ -423,6 +423,118 @@ _An object of the workoutsexercise information._
     "exercise_id": 3
   },
  
+]
+```
+
+<hr />
+
+<hr />
+
+<div id="workout"></div>
+
+## [POST] Registration 
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/workout
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|name (required)           | string |
+|user_id (required)       | integer    |
+
+
+_An example of how the body should appear:_
+
+```js
+  {
+    "name": "testing workout",
+    "user_id": 10
+  }
+```
+
+### What will be returned:
+
+workouts id will be returned 
+
+```js
+[
+  16
+]
+```
+
+<hr />
+
+<div id="exercise"></div>
+
+## [POST] exercise
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/exercise
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|name (required)           | string |
+|region (required)       | string   |
+
+
+_An example of how the body should appear:_
+
+```js
+  {
+    "name": "Coding",
+    "region": "the brain"
+  }
+```
+
+### What will be returned:
+
+exercise id will be returned
+
+```js
+[
+  9
+]
+```
+
+<hr />
+
+## [POST] workouts_exercise
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/w-e
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|reps (required)            | integer   |
+|sets(required)             | integer   |
+|workouts_id(required)      | integer   |
+|sets(required)             | integer   |
+
+_An example of how the body should appear:_
+
+```js
+
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 6,
+    "exercise_id": 7
+}
+
+```
+
+### What will be returned:
+
+workouts_exercise id will be returned
+
+```js
+[
+  11
 ]
 ```
 
