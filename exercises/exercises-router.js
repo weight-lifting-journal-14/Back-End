@@ -35,4 +35,22 @@ router.post('/', (req, res) => {
             res.status(500).json({ error: 'failed to add exercise'})
         })
 })
+
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+    console.log(changes)
+    Exercises.edit(changes, id)
+            .then(exercise => {
+                res.status(200).json({
+                    message: `exercise of id: ${id} was changed`,
+                    exercise,
+                    changes:changes})
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({error: 'the server could not edit the workout'})
+            })
+});
+
 module.exports = router;
