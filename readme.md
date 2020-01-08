@@ -93,7 +93,7 @@ URL: https://weight-lift-journal-dev.herokuapp.com/api/auth/login
 | Input (Case Sensitive)           | Input Type          |
 |-----------------|--------------------|
 |name (required)           | string (4+ characters) |
-|password (required)       | string (4+ characters)    |
+|password (required)       | string (8+ characters)    |
 
 _An example of how the body should appear:_
 
