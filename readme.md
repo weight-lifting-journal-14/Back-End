@@ -71,11 +71,9 @@ _You will receive the user object an a JWT._
 
 ```js
 {
-  "user": {
-    "id": 5,
-    "username": "exampleuser"
-  },
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV4YW1wbGV1c2VyIiwiaWF0IjoxNTc0MDkzMzU3LCJleHAiOjE1NzQxMjIxNTd9.hbL6AISkyQP6IF0PF6_VuUka3fsHLCCO3SfAhvw0AEw"
+  "id": 11,
+  "username": "carly",
+  "workouts": []
 }
 ```
 
@@ -110,10 +108,9 @@ _You will receive the user object, and a JWT._
 
 ```js
 {
-  
-  
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ0ZXN0ZHVkZSIsImlhdCI6MTU3NDE5NTM4OSwiZXhwIjoxNTc0MjgxNzg5fQ.Cf3CLHMwKIy_IMMifdCeDmo6t8DQM5kOBnPuHTyx70w",
-  "message": "Welcome username"
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcmx5IiwiaWF0IjoxNTc4NTA5NzA3LCJleHAiOjE1Nzg1MTMzMDd9.Acex4zwKvpcphwd_Jc6z0HR6SZscrK79oMIleg_4tt8",
+  "message": "Welcome carly!"
 }
 ```
 
