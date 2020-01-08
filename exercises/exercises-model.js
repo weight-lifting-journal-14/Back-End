@@ -1,6 +1,7 @@
 const db = require('../data/dbConfig');
 
 module.exports = {
+    add,
     find,
     findById
 }
@@ -15,3 +16,7 @@ function findById(id) {
     .where({id})
     .first();
 }
+
+async function add(exercise){
+    return await db('exercises').insert(exercise)
+ };

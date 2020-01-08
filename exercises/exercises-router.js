@@ -23,4 +23,16 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const exercises = req.body
+    console.log(exercises)
+    Exercises.add(exercises)
+
+        .then(exercise => {
+            res.status(200).json(exercise)
+        })
+        .catch(err => {
+            res.status(500).json({ error: 'failed to add exercise'})
+        })
+})
 module.exports = router;
