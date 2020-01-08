@@ -1,6 +1,7 @@
 const db = require('../data/dbConfig');
 
 module.exports = {
+    add,
 	find
 };
 
@@ -9,3 +10,7 @@ function find() {
         .orderBy('id')
 
 }
+
+async function add(workout_exercise){
+    return await db('workouts_exercises').insert(workout_exercise)
+ };
