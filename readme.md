@@ -269,7 +269,7 @@ _An object of the workouts information._
 
 <hr />
 
-## [GET] All workouts by user id
+## [GET] All workouts by id
 
 <a href="#top">Return to the top</a>
 
@@ -347,7 +347,7 @@ _An object of the exercise information._
 
 <hr />
 
-## [GET] All Exercises by user id
+## [GET] All Exercises by id
 
 <a href="#top">Return to the top</a>
 
@@ -363,6 +363,67 @@ _An object of the exercises by id._
   "name": "Pushups",
   "region": "Chest"
 }
+```
+
+<hr />
+
+## [GET] All workoutExercises
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/w-e
+
+**NOTE:** returns all workoutExercises in database
+
+### What will be returned:
+_An object of the workoutsexercise information._
+
+```js
+[
+  {
+    "id": 1,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 1,
+    "exercise_id": 1
+  },
+  {
+    "id": 2,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 1,
+    "exercise_id": 2
+  },
+  {
+    "id": 3,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 1,
+    "exercise_id": 3
+  },
+  {
+    "id": 4,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 2,
+    "exercise_id": 1
+  },
+  {
+    "id": 5,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 2,
+    "exercise_id": 2
+  },
+  {
+    "id": 6,
+    "reps": 10,
+    "sets": 10,
+    "workout_id": 2,
+    "exercise_id": 3
+  },
+ 
+]
 ```
 
 <hr />
