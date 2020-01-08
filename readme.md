@@ -104,12 +104,13 @@ _An example of how the body should appear:_
 
 ### What will be returned:
 
-_You will receive the user object, and a JWT._
+_You will receive the user_id, and a JWT. and a message saying welcome
 
 ```js
 {
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcmx5IiwiaWF0IjoxNTc4NTA5NzA3LCJleHAiOjE1Nzg1MTMzMDd9.Acex4zwKvpcphwd_Jc6z0HR6SZscrK79oMIleg_4tt8",
+  "id": 10,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZGUgU2F2YWdlIiwiaWF0IjoxNTc4NTEwMzEwLCJleHAiOjE1Nzg1OTY3MTB9.PubFmKU1nI3IbiYc5uMq7hwMtOQGztQ5roYzIOKlxoo",
   "message": "Welcome carly!"
 }
 ```
