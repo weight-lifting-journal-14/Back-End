@@ -87,7 +87,7 @@ _You will receive the user object an a JWT._
 
 <a href="#top">Return to the top</a>
 
-URL: https://weight-lift-journal-dev.herokuapp.com/api/auth/login
+URL: https://w-l-j.herokuapp.com/api/auth/login
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -125,7 +125,7 @@ _You will receive the user object, and a JWT._
 
 <a href="#top">Return to the top</a>
 
-URL: https://weight-lift-journal-dev.herokuapp.com/api/users
+URL: https://w-l-j.herokuapp.com/api/users
 
 ### What will be returned:
 _An array of all users within the database._
