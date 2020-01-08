@@ -6,6 +6,7 @@ module.exports = {
 	findBy,
 	findById,
 	findByUsername,
+	addWorkout,
 	remove
 };
 
@@ -24,6 +25,10 @@ function add(user) {
 		return findById(id);
 	  });
   }
+  function addWorkout(workout){
+    return db('workouts')
+            .insert(workout, 'id');
+}
   
   function findByUsername(id) {
 	return db("users")
@@ -66,7 +71,37 @@ if (user) {
         }
 };
 
+// async function getByUsername(username) {
+//     let workouts = [];
 
+//     // Retrieves the user by their username
+//     const user = await db('users')
+//         .where({ username })
+//         .select('id', 'username', 'email', 'created_at', 'updated_at')
+//         .first();
+
+//     // Returns all workouts specific to that user if they exist
+//     if (user) {
+//         workouts = await db('workouts as w')
+//             .leftJoin('workouts_exercises as we', 'we.workout_id', 'w.id')
+//             .leftJoin('exercises as e', 'we.exercise_id', 'e.id')
+//             .groupBy('w.name')
+//             .select('w.name as workout_name')
+//             .count('e.id as exercises')
+//             .where({ user_id: user.id });
+    
+//         return await {
+//             ...user,
+//             workouts: workouts
+//         };
+//     }
+// };
+// async function findById(id) {
+// const user = await Users.findById(user_id);
+// const workouts = await Workouts.findBy({user_id: user_id}) // return an array
+// const response = { user, workouts };
+// res.status(200).json(response);
+// }
 
 
 
