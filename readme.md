@@ -60,8 +60,8 @@ _An example of how the body should appear:_
 
 ```js
 {
-    "username": "exampleuser",
-    "password": "exampleuser"
+	"username": "carly",
+	"password": "carly"
 }
 ```
 
@@ -97,8 +97,8 @@ _An example of how the body should appear:_
 
 ```js
 {
-	"username": "exampleuser",
-	"password": "exampleuser"
+	"username": "carly",
+	"password": "carly"
 }
 ```
 
