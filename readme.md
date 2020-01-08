@@ -7,8 +7,8 @@ Endpoints that do _**not**_ require authentication (Not Protected):
 
 | Requests        | Endpoints          | Description
 |-----------------|--------------------|--------------------|
-|<a href="#register">GET Registration</a>  | /api/auth/register | <b>POST</b> request to register new user
-|<a href="#login">GET Login</a>            | /api/auth/login|  <b>POST</b> request to login new user
+|<a href="#register">POST Registration</a>  | /api/auth/register | <b>POST</b> request to register new user
+|<a href="#login">POST Login</a>            | /api/auth/login|  <b>POST</b> request to login new user
 
 Endpoints that **_DO_** require authentication (Protected):
 <b>GET</b> request endpoints:
