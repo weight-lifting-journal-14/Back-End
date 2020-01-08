@@ -590,6 +590,50 @@ message saying the workout of the targeted id was changed, the workout_id and th
 
 <hr />
 
+<div id="edit a workouts_exercise"></div>
+
+## [PUT] workouts_exercise by ID
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/w-e/:id
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|reps (required)            | string |
+|sets (required)            | string   |
+|workout_id (optional)      | integer|
+|sets (optional)            | integer  |
+
+
+_An example of how the body should appear:
+
+```js
+{
+    "reps": 11,
+    "sets": 11,
+    "workout_id": 4,
+    "exercise_id": 4
+}
+```
+
+### What will be returned:
+
+message saying the workout of the targeted id was changed, the workout_id and the changes made and by which user
+
+```js
+{
+  "message": "workouts_exercise of id: 1 was changed",
+  "Workouts_exercise": 1,
+  "changes": {
+    "reps": 11,
+    "sets": 11,
+    "workout_id": 4,
+    "exercise_id": 4
+  }
+}
+```
 <div id="edit a exercise"></div>
 
 ## [PUT] exercise by ID

@@ -2,8 +2,9 @@ const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Users = require('../users/users-model');
+const checkIfUsernameIsTaken = require('../middleware/checkIfUsernameIsTaken')
 
-router.post('/register', (req, res) => {
+router.post('/register', checkIfUsernameIsTaken, (req, res) => {
 	let user = req.body;
 	if (!user.username) {
 		res.status(412).json({message: 'missing username buddy'})

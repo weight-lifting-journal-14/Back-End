@@ -25,10 +25,10 @@ function add(user) {
 	  });
   }
 
-function findByUsername(id) {
+function findByUsername(username) {
 return db("users")
 	.select("id", "username")
-	.where({ id })
+	.where({ username })
 	.first();
 }
 

@@ -24,4 +24,22 @@ router.post('/', (req, res) => {
         })
 })
 
+// PUT - edit an exercise that belongs to a workout
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+    console.log(changes)
+    Workouts_exercises.editExercise(changes, id)
+            .then(Workouts_exercise => {
+                res.status(200).json({
+                    message: `workouts_exercise of id: ${id} was changed`,
+                    Workouts_exercise,
+                    changes:changes})
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({error: 'the server could not edit the workout'})
+            })
+});
+
 module.exports = router;

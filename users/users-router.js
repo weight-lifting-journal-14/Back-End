@@ -23,6 +23,17 @@ router.get('/:id', (req, res) => {
   })
 })
 
+router.get('/username', (req, res) => {
+  const username = req.body.username
+  console.log(username)
+  Users.findByUsername(username)
+  .then(users => {
+    res.json(users);
+    
+  })
+})
+
+
 // POST - Add a workout to a user
 router.post('/:id/workouts', (req, res) => {
   const workoutData = req.body;
