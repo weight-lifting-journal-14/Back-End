@@ -539,3 +539,31 @@ workouts_exercise id will be returned
 ```
 
 <hr />
+
+
+<div id="user"></div>
+
+## [DEL] User by ID
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/users/:id
+
+_An example of how the endpoint should appear:_
+
+```js
+https://w-l-j.herokuapp.com/api/users/7
+```
+
+### What will be returned:
+
+message saying user was deleted and number of users removed
+
+```js
+{
+  "message": "user deleted",
+  "removed": 1
+}
+```
+
+<hr />
