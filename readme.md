@@ -1,5 +1,5 @@
 ## API Documentation
-**BASE URL** https://weight-lift-journal-dev.herokuapp.com/
+**BASE URL** 
 - Attach endpoints to the end of the base URL in order to make HTTP Requests.
 
 ### Table of Contents
