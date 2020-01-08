@@ -12,6 +12,7 @@ Endpoints that do _**not**_ require authentication (Not Protected):
 
 Endpoints that **_DO_** require authentication (Protected):
 <b>GET</b> request endpoints:
+
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
 |<a href="#users">GET Users</a>                    | /api/users |<b>GET</b> request to get all users
@@ -31,6 +32,7 @@ Endpoints that **_DO_** require authentication (Protected):
 |<a href="#allWorkouts">POST workouts_exercises</a>       | /api/w-e | <b>POST</b> request to add new Workouts_exercises
 
 <b>DEL</b> request endpoints:
+
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
 |<a href="#users">DEL user by ID</a>                    | /api/users/:id |<b>POST</b> request to delete user by ID
