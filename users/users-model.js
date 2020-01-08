@@ -32,12 +32,47 @@ function add(user) {
 	  .first();
   }
 
-  function findById(id) {
-	return db("users")
-	  .select("id", "username")
-	  .where({ id })
-	  .first();
-  }
+//   function findById(id) {
+// 	return db("users")
+// 	  .select("id", "username")
+// 	  .where({ id })
+// 	  .first();
+//   }
+
+// Get an individual user by ID
+async function findById(id) {
+    let workouts = [];
+    
+    // Retrieves the user by their ID
+    const user = await db('users')
+        .where({ id })
+        .select('id', 'username')
+        .first();
+
+        // Returns all workouts specific to that user if they exist
+if (user) {
+    workouts = await db('workouts as w')
+        .leftJoin('workouts_exercises as we', 'we.workout_id', 'w.id')
+        .leftJoin('exercises as e', 'we.exercise_id', 'e.id')
+        .select('w.id', 'w.name')
+        .where({ user_id: id })
+        .groupBy('w.id')
+        .count('e.id as exercises')
+
+            return await {
+                ...user,
+                workouts: workouts
+            };
+        }
+};
+
+
+
+
+
+
+
+
 // async function add(user) {
 // 	const [ id ] = await db('users').insert(user);
 

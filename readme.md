@@ -171,3 +171,43 @@ _An array of all users within the database._
 ```
 
 <hr />
+
+
+<div id="userID"></div>
+
+## [GET] User by ID
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/users/:id
+
+**NOTE:** Be sure to include the `id` of an existing user on the end of the endpoint.
+
+### What will be returned:
+_An object of the user information._
+
+```js
+{
+  "id": 2,
+  "username": "jade",
+  "workouts": [
+    {
+      "id": 4,
+      "name": "workout name",
+      "exercises": 0
+    },
+    {
+      "id": 5,
+      "name": "leg Workout",
+      "exercises": 0
+    },
+    {
+      "id": 6,
+      "name": "arm Workout",
+      "exercises": 1
+    }
+  ]
+}
+```
+
+<hr />
