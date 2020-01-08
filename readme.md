@@ -31,11 +31,18 @@ Endpoints that **_DO_** require authentication (Protected):
 |<a href="#exerciese">POST exercise</a>              | /api/exercises | <b>POST</b> request to add new exercise
 |<a href="#workouts_exercise">POST workouts_exercises</a>       | /api/w-e | <b>POST</b> request to add new Workouts_exercises
 
+<b>PUT</b> request endpoints:
+
+| Requests         | Endpoints | Description
+|----------------- | --------------------|---------------------|
+|<a href="#workoutsID">PUT workout by ID</a>                    | /api/workouts/:id |<b>PUT</b> request to edit a workout
+
 <b>DEL</b> request endpoints:
 
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
 |<a href="#users">DEL user by ID</a>                    | /api/users/:id |<b>POST</b> request to delete user by ID
+
 
 
 
@@ -538,6 +545,46 @@ workouts_exercise id will be returned
 
 <hr />
 
+
+<div id="workouts by ID"></div>
+
+## [PUT] workouts by ID
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/workouts/:id
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|name (required)            | string    |
+|user_id (optional)         | integer   |
+
+_An example of how the body should appear:
+
+```js
+{
+  "name": "brainworkout",
+	"user_id": 2
+}
+```
+
+### What will be returned:
+
+message saying the workout of the targeted id was changed, the workout_id and the changes made and by which user
+
+```js
+{
+  "message": "workout of id: 11 was changed",
+  "workout": 1,
+  "changes": {
+    "name": "brainworkout",
+    "user_id": 2
+  }
+}
+```
+
+<hr />
 
 <div id="user"></div>
 

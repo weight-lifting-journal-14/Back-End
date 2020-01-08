@@ -48,6 +48,7 @@ router.put('/:id', (req, res) => {
     Workouts.edit(changes, id)
             .then(workout => {
                 res.status(200).json({
+                    message: `workout of id: ${id} was changed`,
                     workout,
                     changes:changes})
             })
