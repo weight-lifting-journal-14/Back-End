@@ -35,7 +35,7 @@ Endpoints that **_DO_** require authentication (Protected):
 
 | Requests         | Endpoints | Description
 |----------------- | --------------------|---------------------|
-|<a href="#workoutsID">PUT workout by ID</a>                    | /api/workouts/:id |<b>PUT</b> request to edit a workout
+|<a href="#edit a workout">PUT workout by ID</a>                    | /api/workouts/:id |<b>PUT</b> request to edit a workout
 
 <b>DEL</b> request endpoints:
 
@@ -546,7 +546,7 @@ workouts_exercise id will be returned
 <hr />
 
 
-<div id="workouts by ID"></div>
+<div id="edit a workout"></div>
 
 ## [PUT] workouts by ID
 
