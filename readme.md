@@ -211,3 +211,158 @@ _An object of the user information._
 ```
 
 <hr />
+
+<div id="Allworkouts"></div>
+
+
+## [GET] All workouts
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/workouts
+
+**NOTE:** returns all workouts in database for all users
+
+### What will be returned:
+_An object of the workouts information._
+
+```js
+[
+  {
+    "id": 1,
+    "name": "workout name",
+    "date": null,
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "name": "leg Workout",
+    "date": null,
+    "user_id": 1
+  },
+  {
+    "id": 3,
+    "name": "arm Workout",
+    "date": null,
+    "user_id": 1
+  },
+  {
+    "id": 4,
+    "name": "workout name",
+    "date": null,
+    "user_id": 2
+  },
+  {
+    "id": 5,
+    "name": "leg Workout",
+    "date": null,
+    "user_id": 2
+  },
+  {
+    "id": 6,
+    "name": "arm Workout",
+    "date": null,
+    "user_id": 2
+  },
+]
+```
+
+<hr />
+
+## [GET] All workouts by user id
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/workouts/:id
+
+**NOTE:** returns all workouts in database by id
+
+### What will be returned:
+_An object of the workout by id._
+
+```js
+{
+  "id": 11,
+  "name": "brain Workout",
+  "date": null,
+  "user_id": 10
+}
+```
+
+<hr />
+
+<div id="AllExercises"></div>
+
+
+## [GET] All Exercises
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/exercises
+
+**NOTE:** returns all exercises in database
+
+### What will be returned:
+_An object of the exercise information._
+
+```js
+[
+  {
+    "id": 1,
+    "name": "Squats",
+    "region": "Quads"
+  },
+  {
+    "id": 2,
+    "name": "Curls",
+    "region": "Biceps"
+  },
+  {
+    "id": 3,
+    "name": "Pushups",
+    "region": "Chest"
+  },
+  {
+    "id": 4,
+    "name": "Lunges",
+    "region": "Hamstrings"
+  },
+  {
+    "id": 5,
+    "name": "Pull Ups",
+    "region": "Back"
+  },
+  {
+    "id": 6,
+    "name": "testExercises",
+    "region": "brain"
+  },
+  {
+    "id": 7,
+    "name": "testExercises2",
+    "region": "brain"
+  }
+]
+```
+
+<hr />
+
+## [GET] All Exercises by user id
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/exercises/:id
+
+**NOTE:** returns exercises by exercise_id
+
+### What will be returned:
+_An object of the exercises by id._
+
+```js
+{
+  "name": "Pushups",
+  "region": "Chest"
+}
+```
+
+<hr />
