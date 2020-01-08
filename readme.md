@@ -39,3 +39,135 @@ Endpoints that **_DO_** require authentication (Protected):
 
 
 
+<hr />
+
+<div id="register"></div>
+
+## [POST] Registration 
+
+<a href="#top">Return to the top</a>
+
+URL: https://w-l-j.herokuapp.com/api/auth/registration
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|username (required)           | string (4+ characters) |
+|password (required)       | string (4+ characters)    |
+
+
+_An example of how the body should appear:_
+
+```js
+{
+    "username": "exampleuser",
+    "password": "exampleuser"
+}
+```
+
+### What will be returned:
+
+_You will receive the user object an a JWT._
+
+```js
+{
+  "user": {
+    "id": 5,
+    "username": "exampleuser"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV4YW1wbGV1c2VyIiwiaWF0IjoxNTc0MDkzMzU3LCJleHAiOjE1NzQxMjIxNTd9.hbL6AISkyQP6IF0PF6_VuUka3fsHLCCO3SfAhvw0AEw"
+}
+```
+
+<hr />
+
+<div id="login"></div>
+
+## [POST] Log In
+
+<a href="#top">Return to the top</a>
+
+URL: https://weight-lift-journal-dev.herokuapp.com/api/auth/login
+
+### Request body should include: 
+| Input (Case Sensitive)           | Input Type          |
+|-----------------|--------------------|
+|name (required)           | string (4+ characters) |
+|password (required)       | string (4+ characters)    |
+
+_An example of how the body should appear:_
+
+```js
+{
+	"username": "exampleuser",
+	"password": "exampleuser"
+}
+```
+
+### What will be returned:
+
+_You will receive the user object, and a JWT._
+
+```js
+{
+  
+  
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ0ZXN0ZHVkZSIsImlhdCI6MTU3NDE5NTM4OSwiZXhwIjoxNTc0MjgxNzg5fQ.Cf3CLHMwKIy_IMMifdCeDmo6t8DQM5kOBnPuHTyx70w",
+  "message": "Welcome username"
+}
+```
+
+<hr />
+
+<div id="users"></div>
+
+## [GET] Users
+
+<a href="#top">Return to the top</a>
+
+URL: https://weight-lift-journal-dev.herokuapp.com/api/users
+
+### What will be returned:
+_An array of all users within the database._
+```js
+[
+  {
+    "id": 11,
+    "username": "carly"
+  },
+  {
+    "id": 4,
+    "username": "elizabeth2"
+  },
+  {
+    "id": 2,
+    "username": "jade"
+  },
+  {
+    "id": 10,
+    "username": "jade Savage"
+  },
+  {
+    "id": 3,
+    "username": "lilly"
+  },
+  {
+    "id": 1,
+    "username": "maddy"
+  },
+  {
+    "id": 7,
+    "username": "savanna"
+  },
+  {
+    "id": 8,
+    "username": "savanna2"
+  },
+  {
+    "id": 9,
+    "username": "savanna23"
+  }
+]
+```
+
+<hr />
