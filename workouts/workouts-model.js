@@ -4,7 +4,8 @@ module.exports = {
     // addExercise,
     add,
     find,
-    findById
+    findById,
+    edit
 };
 
 function find(){
@@ -21,6 +22,12 @@ function findById(id) {
 async function add(workout){
    return await db('workouts').insert(workout)
 };
+ function edit(changes, id) {
+    return  db('workouts')
+            .where({id})
+            .update(changes, 'id')
+}
+
 
 // async function addExercise(workoutData, workout_id) {
 //     const exercise = await db('exercises')

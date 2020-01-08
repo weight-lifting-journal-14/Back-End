@@ -41,6 +41,22 @@ router.post('/', (req, res) => {
         })
 })
 
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+    console.log(changes)
+    Workouts.edit(changes, id)
+            .then(workout => {
+                res.status(200).json({
+                    workout,
+                    changes:changes})
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({error: 'the server could not edit the workout'})
+            })
+});
+
 // router.post('/:id/exercises', (req, res) => {
 //     const workoutData = req.body;
 //     const {id} = req.params;
