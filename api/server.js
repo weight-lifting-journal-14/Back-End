@@ -21,7 +21,7 @@ server.use('/api/exercises', exercisesRouter)
 server.use('/api/w-e', workouts_exercisesRouter)
 
 server.get('/', (req, res) => {
-	res.send('its working!');
+	res.send({api: 'up', dbenv: process.env.DB_ENV})
 });
 
 module.exports = server;
