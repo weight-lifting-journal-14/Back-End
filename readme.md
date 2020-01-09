@@ -352,7 +352,7 @@ _An object of the exercise information._
 ```
 
 <hr />
-
+<div id="exercisesID"></div>
 ## [GET] All Exercises by id
 
 <a href="#top">Return to the top</a>
