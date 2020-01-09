@@ -20,7 +20,7 @@ describe("user router tests", () => {
         it("returns all users in database", async () => {
             const users = await db('users');
 
-            await expect(users).toHaveLength(11);   
+            await expect(users).toHaveLength(0);   
         });
     });
 })

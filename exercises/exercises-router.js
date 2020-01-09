@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const validExercise = require('../middleware/validExercise')
 const Exercises = require('./exercises-model');
 
 router.get('/', (req, res) => {
