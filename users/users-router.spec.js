@@ -5,7 +5,6 @@ const server = require("../api/server");
 
 
 describe("user router tests", () => {
- 
     
     describe("GET /users", () => {
         it("returns status code 200", async () => {
