@@ -9,12 +9,12 @@ const restricted = require('../auth/restricted-mid.js');
 router.get('/', restricted, (req, res) => {
   Users.find()
     .then(users => {
-      res.json(users);
+      res.status(users);
     })
-    .catch(err => res.send(err));
+    .catch(err => res.status(500).json({error: "we cant retrieve the users as of right now sorry"}));
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', restricted, (req, res) => {
   const id = req.params.id
   Users.findById(id)
   .then(users => {
@@ -52,21 +52,26 @@ router.post('/:id/workouts', (req, res) => {
   .catch(err => res.status(500).json({ error: "The server failed to add a workout." }));
 })
 
-
-
-// // GET - individual user by username
-// router.get("/:username", async (req, res) => {
-//   const username = req.params.username
-//   try { 
-//       res.status(200).json(username); 
-//       console.log(username)
-//   } 
-//   catch (err) { 
-//       res.status(500).json({ error: "The server failed to retrieve that user." }); 
-//   };
-// });
-
-
+// router.put('/:id', (req, res) => {
+//   const {id} = req.params
+//   let changes = req.body
+//   if(!changes.username) {
+//     res.status(422).json({errMessage: "missing the username there buddy"})
+//   }
+//   if(!changes.password) {
+//     res.status(422).json({errMessage: "missing the password there buddy"})
+//   }
+//   const hash = bcrypt.hashSync(changes.passwork, 8);
+//   changes.password = hash
+//   Users.update(id,changes)
+//   .then(changed => {
+//     if(changed) {
+//       res.status(200).json({message: "User succesfully updated"})
+//     } else {
+//       res.status(404).json({message: "could not update user"})
+//     }
+//   })
+// })
 
 router.delete("/:id", (req, res) => {
   const id = req.params.id;

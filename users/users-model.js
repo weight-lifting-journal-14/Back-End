@@ -6,7 +6,8 @@ module.exports = {
 	findBy,
 	findById,
 	findByUsername,
-	remove
+  remove,
+  addWorkout
 };
 
 function find() {
@@ -31,13 +32,6 @@ return db("users")
 	.where({ username })
 	.first();
 }
-
-//   function findById(id) {
-// 	return db("users")
-// 	  .select("id", "username")
-// 	  .where({ id })
-// 	  .first();
-//   }
 
 // Get an individual user by ID
 async function findById(id) {
@@ -65,7 +59,22 @@ if (user) {
             };
         }
 };
+function addWorkout(workout){
+  return db('workouts')
+          .insert(workout, 'id');
+}
 
+// function update(id, changes) {
+//   return db('users')
+//     .where('id', id)
+//     .update(changes)
+//     .then(ids => {
+//       const [id] = ids;
+//       return db('users')
+//         .where({id})
+//         .first()
+//     })
+// }
 
 function remove(id) {
 	return db('users')
