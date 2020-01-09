@@ -352,7 +352,9 @@ _An object of the exercise information._
 ```
 
 <hr />
+
 <div id="exercisesID"></div>
+
 ## [GET] All Exercises by id
 
 <a href="#top">Return to the top</a>
@@ -372,6 +374,7 @@ _An object of the exercises by id._
 ```
 
 <hr />
+
 <div id="get workouts_exercises"></div>
 
 ## [GET] All workoutExercises
