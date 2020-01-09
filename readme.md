@@ -20,7 +20,7 @@ Endpoints that **_DO_** require authentication (Protected):
 |<a href="#all Workouts">GET All workouts</a>       | /api/workouts | <b>GET</b> request get all workouts
 |<a href="#workoutID">GET Workout by ID</a>        | /api/workouts/:id | <b>GET</b> request to get all workouts by thier ID
 |<a href="#exercises">GET exercises</a>            | /api/exercises | <b>GET</b> request to get all exercises
-|<a href="#get exercise by ID">GET exercises by ID</a>    | /api/exercises/:id| <b>GET</b> request to get exercises by thier ID
+|<a href="#exerciseById">GET exercises by ID</a>    | /api/exercises/:id| <b>GET</b> request to get exercises by thier ID
 |<a href="#get workouts_exercises">GET workouts_exercises</a>              | /api/w-e | <b>GET</b> request to get all workouts_exercises  
 
 <b>POST</b> request endpoints:
@@ -93,7 +93,7 @@ _You will receive the user object an a JWT._
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/login
+**URL:** https://w-l-j.herokuapp.com/api/auth/login
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -353,7 +353,7 @@ _An object of the exercise information._
 
 <hr />
 
-<div id="get exercise by ID"></div>
+<div id="exerciseById"></div>
 
 ## [GET] All Exercises by id
 
