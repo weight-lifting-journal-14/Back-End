@@ -442,11 +442,11 @@ _An object of the workoutsexercise information._
 
 <div id="workout"></div>
 
-## [POST] Registration 
+## [POST] post workout 
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/workout
+URL: https://w-l-j.herokuapp.com/api/workouts
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -482,7 +482,7 @@ workouts id will be returned
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/exercise
+URL: https://w-l-j.herokuapp.com/api/exercises
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -518,7 +518,7 @@ exercise id will be returned
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/w-e
+URL: https://w-l-j.herokuapp.com/api/w-e
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -559,7 +559,7 @@ workouts_exercise id will be returned
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/workouts/:id
+URL: https://w-l-j.herokuapp.com/api/workouts/:id
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -599,7 +599,7 @@ message saying the workout of the targeted id was changed, the workout_id and th
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/w-e/:id
+URL: https://w-l-j.herokuapp.com/api/w-e/:id
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -643,7 +643,7 @@ message saying the workout of the targeted id was changed, the workout_id and th
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/exercise/:id
+URL: https://w-l-j.herokuapp.com/api/exercise/:id
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |
@@ -681,7 +681,7 @@ message saying the workout of the targeted id was changed, the workout_id and th
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/users/:id
+URL: https://w-l-j.herokuapp.com/api/users/:id
 
 _An example of how the endpoint should appear:_
 
