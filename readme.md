@@ -55,7 +55,7 @@ Endpoints that **_DO_** require authentication (Protected):
 
 <a href="#top">Return to the top</a>
 
-URL: https://w-l-j.herokuapp.com/api/auth/registration
+URL: https://w-l-j.herokuapp.com/api/auth/register
 
 ### Request body should include: 
 | Input (Case Sensitive)           | Input Type          |

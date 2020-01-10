@@ -4,7 +4,8 @@ module.exports = {
     add,
     find,
     findById,
-    edit
+    edit,
+    remove
 }
 
 function find() {
@@ -27,3 +28,8 @@ async function add(exercise){
             .where({id})
             .update(changes, 'id')
 }
+function remove(id) {
+	return db('users')
+	  .where('id', Number(id))
+	  .del();
+  }
