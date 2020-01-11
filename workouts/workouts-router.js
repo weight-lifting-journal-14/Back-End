@@ -13,7 +13,7 @@ router.get('/',restricted, (req, res) => {
         })
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', restricted, (req, res) => {
     const { id } = req.params;
     Workouts.findById(id)
     .then(workout => {
@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/', restricted, (req, res) => {
     const workouts = req.body
     console.log(workouts)
     Workouts.add(workouts)
@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
         })
 })
 
-router.put('/:id', (req, res) => {
+router.put('/:id', restricted, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
     console.log(changes)
