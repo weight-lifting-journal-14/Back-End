@@ -20,7 +20,7 @@ router.get('/:id', restricted, (req, res) => {
         if (workout) {
             res.status(200).json(workout)
         } else {
-            res.status(404).json({message: `Sooo yea the id of ${id} isnt in the database sorry mate try again`})
+            res.status(400).json({message: `Sooo yea the id of ${id} isnt in the database sorry mate try again`})
         }
     })
     .catch(err => {
@@ -32,7 +32,6 @@ router.post('/', restricted, (req, res) => {
     const workouts = req.body
     console.log(workouts)
     Workouts.add(workouts)
-
         .then(workout => {
             res.status(200).json(workout)
         })

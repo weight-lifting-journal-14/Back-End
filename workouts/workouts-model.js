@@ -19,10 +19,10 @@ function findById(id) {
       .first();
   }
 
-async function add(workout){
-   return await db('workouts').insert(workout)
+function add(workout){
+   return db('workouts').insert(workout)
 };
- function edit(changes, id) {
+function edit(changes, id) {
     return  db('workouts')
             .where({id})
             .update(changes, 'id')
