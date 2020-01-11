@@ -16,7 +16,12 @@ router.post('/register', checkIfUsernameIsTaken, (req, res) => {
 	user.password = hash;
 	Users.add(user)
 		.then((saved) => {
-			res.status(201).json(saved);
+			const token = signToken(user);
+			res.status(201).json({
+				saved,
+				token,
+				message : `Welcome ${user.username}!`,
+			});
 		})
 		.catch((error) => {
 			res.status(500).json({ errorMessage: 'registration does not work' });
