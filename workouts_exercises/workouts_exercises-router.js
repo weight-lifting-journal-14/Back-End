@@ -12,7 +12,7 @@ router.get('/',restricted, (req, res) => {
         })
 })
 
-router.post('/', (req, res) => {
+router.post('/', restricted, (req, res) => {
     const workouts_exercises = req.body
     console.log(workouts_exercises)
     Workouts_exercises.add(workouts_exercises)
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
 })
 
 // PUT - edit an exercise that belongs to a workout
-router.put('/:id', (req, res) => {
+router.put('/:id', restricted, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
     console.log(changes)

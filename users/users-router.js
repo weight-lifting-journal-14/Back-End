@@ -12,7 +12,7 @@ router.get('/', restricted, (req, res) => {
     .catch(err => res.status(500).json({error: "we cant retrieve the users as of right now sorry"}));
 });
 
-router.get('/:id', restricted, (req, res) => {
+router.get('/:id', restricted,  (req, res) => {
   const id = req.params.id
   Users.findById(id)
   .then(users => {
@@ -21,7 +21,7 @@ router.get('/:id', restricted, (req, res) => {
   })
 })
 
-router.get('/username', (req, res) => {
+router.get('/username', restricted, (req, res) => {
   const username = req.body.username
   console.log(username)
   Users.findByUsername(username)
@@ -33,7 +33,7 @@ router.get('/username', (req, res) => {
 
 
 // POST - Add a workout to a user
-router.post('/:id/workouts', (req, res) => {
+router.post('/:id/workouts', restricted, (req, res) => {
   const workoutData = req.body;
   const { id } = req.params;
 
